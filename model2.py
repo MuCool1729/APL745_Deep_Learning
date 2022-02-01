@@ -27,7 +27,7 @@ class NNet2(nn.Module):
         # no activation and no softmax at the end
         return out
 class Model:
-    def __init__(self,lr,wd,epoch):
+    def __init__(self,lr=0.001,wd=0.005,epoch=100):
         self.model = NNet2()
         self.learning_rate = lr
         self.weight_decay = wd
