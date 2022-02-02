@@ -131,5 +131,5 @@ class Model:
         plt.ylabel('accuracy')
         plt.legend()       
         plt.show()
-    def time_taken(self):
+    def time_took(self):
         return self.time_taken;
