@@ -33,6 +33,7 @@ class Model:
         self.weight_decay = wd
         self.num_of_epochs = epoch
     def train(self,train_dataloader):
+        # trains only
         self.lossfun = nn.CrossEntropyLoss()
         self.optimizer = torch.optim.Adam(self.model.parameters(),self.learning_rate,weight_decay=self.weight_decay)
         for epoch in range(self.num_of_epochs):

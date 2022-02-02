@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import time
 # A Neural Net with 1-hidden layer network with 50 hidden units
 
+# a class that initialises a neural net with given model configurations
 class NNet1(nn.Module):
     def __init__(self):
             super(NNet1, self).__init__()
@@ -39,6 +40,7 @@ class Model:
             print(f'epoch: {epoch+1}/{self.num_of_epochs},loss = {loss.item():.4f}')
     
     def test(self,test_dataloader):
+        # tests the model on test data
         with torch.no_grad():
             correct = 0
             total = 0
@@ -66,6 +68,7 @@ class Model:
                 break
     
     def compute(self,train_dataloader,test_dataloader):
+        # does training and stores useful information for graph plotting
         self.train_losses = []
         self.test_accuracies = []
         self.train_accuracies = []
