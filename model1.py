@@ -61,7 +61,7 @@ class Model:
                     label = "ground truth is: " + str(labels[i].item())+ " and predicted label is: " + str(pred_class[i].item())
                     image = np.reshape(image,(28,28))
                     plt.imshow(image, interpolation='nearest',cmap = 'gray')
-                    plt.xlabel(label,color='yellow')
+                    plt.xlabel(label,color='red')
                     plt.show()
                 break
     
